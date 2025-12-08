@@ -2,5 +2,27 @@ Api (node) > frontend (React) > Deploy  > Devops
 
 create pos system
 
+firstly check node -v,npm -v
+
+npm init
+
+install dependencies
+
+create index.js file
+
+after that import the dependencies
+
+initialize the app
+
+import env
+
+conncet mogoose
+
+
+
+
+
+
+
 
 
