@@ -16,7 +16,9 @@ initialize the app
 
 import env
 
-conncet mogoose
+connect mogoose
+
+backend create
 
 
 
