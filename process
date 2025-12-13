@@ -21,8 +21,11 @@ connect mogoose
 backend create
 
 
+check ng version for create frontend
 
+ng new pos-system-client
 
+ng serve
 
 
 
