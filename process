@@ -29,5 +29,16 @@ ng serve
 
 create frontend
 
+buy servers
+
+create aws account
+
+create ec2
+
+launch an instance
+
+before connect to ec2 instance using ssh client ,I'm going to transfer pem file to windows to ubuntu using this scp C:\Users\kavin\Desktop\devops-api-key.pem linuxcode@192.xxx.x.xxx:/home/linuxcode/Desktop/DEVOPS/,
+
+
 
 
