@@ -39,6 +39,19 @@ launch an instance
 
 before connect to ec2 instance using ssh client ,I'm going to transfer pem file to windows to ubuntu using this scp C:\Users\kavin\Desktop\devops-api-key.pem linuxcode@192.xxx.x.xxx:/home/linuxcode/Desktop/DEVOPS/,
 
+open terminal located in pem file & put this things 
+
+chmod 400 "devops-api-key.pem"
+ssh -i "devops-api-key.pem" ubuntu@ec2-xxxxxxx.compute-1.amazonaws.com
+
+after that install nginx 
+sudo apt update && sudo apt upgrade -y
+sudo apt install nginx -y
+
+
+
+
+
 
 
 
