@@ -48,6 +48,15 @@ after that install nginx
 sudo apt update && sudo apt upgrade -y
 sudo apt install nginx -y
 
+after that
+
+sudo systemctl enable nginx
+sudo systemctl start nginx
+sudo systemctl status nginx
+
+after tha t in instances copy the address and put that into new tab and paste it ...still not working so 
+
+we have to add some inbound outbound rules 17.52
 
 
 
