@@ -65,7 +65,9 @@ after that we need to create ilstic ip for ec2
   1. click ec2 > elastic ip > allocate elastic ip address > us-east-1 > Allocate click
   2. then click elastic ip > associate illastic ip address > give instance > private ip > Do not put tick for reassociation > Associate
 
+after that you need to add new ssh connection to ubuntu and download dependencies.
 
+sudo apt update && sudo apt upgrade -y 34.50
 
 
 
