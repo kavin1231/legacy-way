@@ -56,7 +56,16 @@ sudo systemctl status nginx
 
 after tha t in instances copy the address and put that into new tab and paste it ...still not working so 
 
-we have to add some inbound outbound rules 17.52
+we have to add some inbound outbound rules 
+1. go to instances
+2. security,security groups,edit inbound rules,then you can see only have default ssh connect rule,so we need to add new one
+ *hhtp> 80 > anywhere ipv4 >server default
+
+after that we need to create ilstic ip for ec2
+  1. click ec2 > elastic ip > allocate elastic ip address > us-east-1 > Allocate click
+  2. then click elastic ip > associate illastic ip address > give instance > private ip > Do not put tick for reassociation > Associate
+
+
 
 
 
