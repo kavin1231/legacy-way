@@ -106,6 +106,12 @@ node index.js( not working )
 sudo nano index.js
 change mongodb url like this mongodb://localhost:27017/pos_system_devops
 
+after that node index.js
+its working
+
+1.18
+
+
 
 
   
