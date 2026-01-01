@@ -67,7 +67,35 @@ after that we need to create ilstic ip for ec2
 
 after that you need to add new ssh connection to ubuntu and download dependencies.
 
-sudo apt update && sudo apt upgrade -y 34.50
+  sudo apt update && sudo apt upgrade -y 
+  sudo apt install nodejs
+  node -v
+  sudo apt install npm
+  npm -v
+
+install mongodb 24 
+  curl -fsSL .....
+  apt-key list
+  echo ....
+  sudo apt update
+  sudo apt install mongodb.org
+  mongod --version
+  sudo systemctl enable mongod
+  start / status 
+  mongosh
+
+after that add inbound rule for mongodb and system running port
+
+1.custom tcp > 27017 > Anywhere can IPV4 > mongod server
+2.custom tcp > 3000 > Anywhere can IPV4 > server port
+
+
+  
+
+
+
+
+
 
 
 
