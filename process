@@ -89,6 +89,24 @@ after that add inbound rule for mongodb and system running port
 1.custom tcp > 27017 > Anywhere can IPV4 > mongod server
 2.custom tcp > 3000 > Anywhere can IPV4 > server port
 
+git -v
+
+if there is no any versions we need to install git 
+after that we  can clone our github repositories in here 
+     but if that is public we can without anyerrors clone,but if that was a private repository we cant directly clone.so we need to do some steps for that...
+        steps
+           *settings on github > developer settings > personal access tokens (classic) > generate new token > classic > token name add > exp 30 days > select scopes > repo, write:packages,delete:packages, admin:public_key,admin:repo_hook,project,admin:ssh_signing_key > generate token 
+after that go to ubunntu again 
+git clone https://kavin1231:ghp_KlnuFtESorixxxxxxxxxxxxxxxxxxxx@github.com/kavin1231/pos-system-devops.git
+
+ls
+cd pos-system-devops
+ls
+node index.js( not working )
+sudo nano index.js
+change mongodb url like this mongodb://localhost:27017/pos_system_devops
+
+
 
   
 
