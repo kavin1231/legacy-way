@@ -109,8 +109,15 @@ change mongodb url like this mongodb://localhost:27017/pos_system_devops
 after that node index.js
 its working
 
-1.18
 
+but if press ctrl + C in terminal http server not working on web
+
+so we need to use pm2
+   sudo npm install pm2 -g
+   pm2 -v
+   pm2 start index.js
+
+project is online now...without terminal..
 
 
 
