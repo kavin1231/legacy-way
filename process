@@ -140,9 +140,21 @@ sudo apt install certbot python3-certbot-nginx -y
 
 after that 
 cd /etc  > cd nginx/ > ls > cd sites-available/ > ls > sudo nano default
+
 server {
     listen 80;
     server_name devstack-devops.shop www.devstack-devops.shop;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name devstack-devops.shop www.devstack-devops.shop;
+
+    ssl_certificate /etc/letsencrypt/live/devstack-devops.shop/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/devstack-devops.shop/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
     location / {
         proxy_pass http://localhost:3000;
@@ -150,9 +162,11 @@ server {
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection 'upgrade';
         proxy_set_header Host $host;
+ 
         proxy_cache_bypass $http_upgrade;
     }
 }
+
 
 save and sudo nginx -t
 sudo systemctl reload nginx
@@ -164,6 +178,10 @@ give email and yes
 sudo certbot renew --dry-run
 
 sudo systemctl restart nginx and status
+
+curl http://localhost:3000/test
+curl https://devstack-devops.shop/test
+
 
 
 
