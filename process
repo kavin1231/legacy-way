@@ -179,12 +179,17 @@ sudo certbot renew --dry-run
 
 sudo systemctl restart nginx and status
 
+add https inbound rule for instance ec2
+after that check those
+
 curl http://localhost:3000/test
 curl https://devstack-devops.shop/test
 
+after that buy a shared domain server
 
 
-2.35
+2.44
+
 
 
 
