@@ -124,7 +124,7 @@ project is online now...without terminal..
   
 .......................................................................................
 
-import an sertbot
+import an Certbot
 
 buy a hostinger domain
 
@@ -132,7 +132,11 @@ search domain > buy now > 1 yr > complete payment
 
 go to DNS and select A name record and add ilastic ip address to points to ,and time to leave to 60  
 
-1.42
+again open terminal 
+
+Certbot is a free tool that automatically provides and renews SSL certificates to enable HTTPS and secure your website.
+after that install certbot
+sudo apt install certbot python3-certbot-nginx -y
 
 
 
