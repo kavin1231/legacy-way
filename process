@@ -138,6 +138,39 @@ Certbot is a free tool that automatically provides and renews SSL certificates t
 after that install certbot
 sudo apt install certbot python3-certbot-nginx -y
 
+after that 
+cd /etc  > cd nginx/ > ls > cd sites-available/ > ls > sudo nano default
+server {
+    listen 80;
+    server_name devstack-devops.shop www.devstack-devops.shop;
+
+    location / {
+        proxy_pass http://localhost:3000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
+
+save and sudo nginx -t
+sudo systemctl reload nginx
+sudo apt install certbot python3-certbot-nginx -y
+
+clear 
+sudo certbot --nginx -d devstack-devops.shop -d www.devstack-devops.shop
+give email and yes
+sudo certbot renew --dry-run
+
+sudo systemctl restart nginx and status
+
+
+
+
+
+
+
 
 
 
