@@ -186,9 +186,61 @@ curl http://localhost:3000/test
 curl https://devstack-devops.shop/test
 
 after that buy a shared domain server
+then we need share web to shared web
+
+how to access shared ..
+using filezila client can share files to shared
+
+firslty check on dashboard ssl certificate is active
+
+create a new ftp account
+
+run filezilla on ubuntu 
+
+open envirenments in pos-system-client and copy the 3000 port paste it to in normal environment also
+
+open filezilla and add website button 
+after that you can see my sites > click new site add name and add other credentials
+after that go to hostinger shared webhosting dashboard and click ftp account and get details
+firslt add ftp ip > port 21 > add the full user > and password > ok > connect 
+
+after that delete default.php 
+
+after that go to ubuntu pos-system-client folder and open terminal
+ng build
+if there any errors like production errors
+
+after that u need to text editor open in angular.json 
+budget size change 
+
+maximum warning errors 1mb,2mb save
+
+ng build
+
+again open the 2 environment in client and replace localhost 3000 with this https://devstack-devops.shop   > save
+
+ng build again
+next go to project you can see dist and browser after that copy the address and paste it in the filezilla localsite search option and paste the path to that,
+
+after that ctrl+A right click upload 
 
 
-2.44
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
