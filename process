@@ -226,8 +226,64 @@ after that ctrl+A right click upload
 
 ................................................................................................deployment end
 
+learn about git and github
 
+Git
 
+Git is a version control system.
+It helps developers track changes in code, go back to previous versions, and work together safely.
+
+What Git does:
+
+Keeps history of all code changes
+
+Allows multiple people to work on the same project
+
+Helps fix mistakes by restoring older versions
+
+Works locally on your computer
+
+Common Git actions:
+
+git init – start Git in a project
+
+git add – stage changes
+
+git commit – save changes with a message
+
+git branch – create separate work versions
+
+git merge – combine branches
+
+GitHub
+
+GitHub is a cloud-based platform that hosts Git repositories online.
+
+What GitHub does:
+
+Stores your Git projects on the internet
+
+Makes collaboration easy (teamwork)
+
+Provides tools like pull requests, issues, reviews
+
+Acts as a backup for your code
+
+Git             vs              GitHub:
+Git	                            GitHub
+Tool/software                 	Online platform
+Works locally                 	Works on the cloud
+Manages code history	          Shares & collaborates
+
+How Git and GitHub work together:
+
+Write code on your computer
+Git tracks the changes
+Push code to GitHub
+Others pull, review, or contribute
+
+and git branching
+main and developer branch
 
 
 
