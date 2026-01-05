@@ -286,11 +286,47 @@ and git branching
 main and developer branch
 
 
+..........................................
+
+create a ec2 instance again 
+after that get a key pem file
+
+open um ubuntu file and create a new folder on desktop
+
+after that again transfer that pem file windows to ubuntu vm using there ip address like previously we did
+check now
+
+after that open the terminal and copy paste ssh client connect methods like previously did
+example ..
+chmod 400 "CI.pem"
+ssh -i "CI.pem" ubuntu@ec2-xxxxxxx.compute-1.amazonaws.com
+
+in that we need to put java project so we need to create a java simple testing project using spring initializr
+  1.java,maven,default version, com.destack.ci,pipeline,jar,add dependencies like spring boot devtools and spring web
+
+after that again transfer that zip file windows to ubuntu vm using there ip address like previously we did
+unzip & open in intelij idea
 
 
+after that go src > main > resources > application.properties and add > server.port=8081 
+after that in main > java > com.devstack.ci.pipeline > right click > package > TestController >  package com.devstack.ci.pipeline.controller;
 
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
+@RequestMapping("/api/v1/tests")
+public class TestController {
+    @GetMapping
+    public String test() {
+        return "Success!..";
+    }
+}
 
+And then run PiplineApplication  & check http://localhost:8081/api/v1/tests
+
+58.14
 
 
 
