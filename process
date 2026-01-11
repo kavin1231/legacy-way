@@ -407,6 +407,35 @@ and paste those things into terminal
 and after that when you run that you need to put this cod not only sh
 nohup ./run.sh &  (It can help continuously run)
 
+now pipeline is already working.
+
+now we need to add correct path to this like this 
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: sudo kill -9 sudo lsof -t -i:8081 & sudo java -jar /root/actions-runner/_work/pipeline/pipeline/target/pipeline-0.0.1-SNAPSHOT.jar &
+
+
 
 
 
