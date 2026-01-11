@@ -343,6 +343,29 @@ sudo systemctl start nginx
 sudo systemctl enable nginx
 sudo systemctl status nginx
 
+add inbound rules 
+http,https,custom tcp ,8081(server)  save
+
+now nginx displayed in web
+
+now create a new organization
+in github settings organization and choose free organization, addname , conntact email, personal account,dont add tick on get github copilot,add terms & conditions,  
+
+go to intellig java project and on terminal
+git init,
+go to organization,create new repository in organization,add name,add description,create, and again in java project terminal
+git add . 
+git commit -m init
+git remote add origin https://github.com/devstack-devops-6/pipeline.git
+git branch -M main
+git push -u origin main 
+then add username & personal access token
+
+now we are going to connect github and server
+
+
+
+
 
 
 
