@@ -363,9 +363,49 @@ then add username & personal access token
 
 now we are going to connect github and server
 
+click on repository settings,actions,runners,New runner,new self hosted runner,linux ,64 ,and copy paste those things in ubuntu terminal ,press only enter when you face a error you need to get the correct one using chatgpt for enabling super user,
 
+now runner works,but we need to consistently runner work so we need to add a code
+run continuosly github action runner on ubuntu ./run.sh
 
+cd ~/actions-runner
+sudo ./svc.sh install
+sudo ./svc.sh start
+sudo ./svc.sh status
 
+go to repository and in upper you can see actions , java with maven , 
+like this 
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: mvn -B clean package
+
+after we can see something wrong with maven.mvl file so we need to again do this 
+sudo rm -r actions-runner/
+create a runner again
+and paste those things into terminal
+
+and after that when you run that you need to put this cod not only sh
+nohup ./run.sh &  (It can help continuously run)
 
 
 
