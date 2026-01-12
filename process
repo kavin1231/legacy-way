@@ -444,9 +444,84 @@ feet-1-amiru
 feet-2-hasika
 
 
+after that go back to java project intelig and you need to update again and select and checkout the new branch
+
+add some edits in maven file on intelij like this 
+
+name: Java CI with Maven
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Build with Maven
+        run: sudo kill -9 sudo lsof -t -i:8081 & sudo java -jar /actions-runner/_work/pipeline/pipeline/target/pipeline-0.0.1-SNAPSHOT.jar &
 
 
+and commit this into the branch
 
+nohup java -jar pipline-0.0.1-SNAPSHOT.jar (RUN THIS ON UBUNTU TERMINAL)
+like that we are creating CI pipeline using github actions...
+
+....................................................................................................
+
+Day 6
+
+devops lifecycle 
+devops = development + operation
+CI = continuos intigration
+CD = continuos delivery
+plan > code > build > test > release > deploy > operate > monitor     again plan >....
+
+agile methodology > build in small steps, get feedback, improve continuously, and adapt to change.
+and this have iterative progress > devide into small peices.
+agile scrum process use for continous process.
+    project development method.
+    now a days mostly using this for software development
+    agile + devops
+  1.product owner > define product vision / prioritize / goal is fast development & handover
+  2.team > group of people
+  3.Scrum Master > A Scrum Master is a facilitator and coach who helps a Scrum team follow Agile practices, removes obstacles, and ensures smooth, productive delivery of work. like a supervisor.
+     his goal is manage the effeciency inside of scrum framework
+  4.Product > software
+  5.Sprint > A Sprint is a short, fixed period (1–4 weeks) where a Scrum team builds and delivers a small, usable part of the product.
+  
+Product Backlog
+   │
+   │  (Prioritized list of all features & tasks)  pswd reset
+   ▼
+Sprint Planning Meeting
+   │
+   │  (Team selects items & sets Sprint Goal) login signup needed first
+   ▼
+Sprint Backlog
+   │
+   │  (Tasks to complete in this Sprint) login signup
+   ▼
+Sprint (1–4 weeks)
+   │
+   │  (Team works on tasks → delivers potentially shippable product) develop in 4 weeks
+   ▼
+Sprint Review & Retrospective
+   │
+   │  (Feedback & improvements for next Sprint) 
+   ▼
+Back to Product Backlog (updated)
 
 
 
