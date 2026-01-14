@@ -523,6 +523,92 @@ Sprint Review & Retrospective
    ▼
 Back to Product Backlog (updated)
 
+project develop using scrum
+
+daily stand up (daily scrum) 24H >this is like a discuss about process what we have done. or a daily inspect.
+
+Agile principles
+   Agile is based on 12 core principles from the Agile Manifesto.
+
+1️⃣ Customer satisfaction is the highest priority
+
+Deliver valuable software early and continuously to satisfy the customer.
+
+👉 Example: Release features in small parts instead of waiting months.
+
+2️⃣ Welcome changing requirements
+
+Even late changes are accepted if they give competitive advantage.
+
+👉 Agile adapts to change, not fights it.
+
+3️⃣ Deliver working software frequently
+
+Deliver software in short cycles (1–4 weeks).
+
+👉 Called sprints.
+
+4️⃣ Business people and developers work together
+
+Daily collaboration between stakeholders and the development team.
+
+👉 No communication gaps.
+
+5️⃣ Build projects around motivated individuals
+
+Give them the support, trust, and environment they need.
+
+👉 Don’t micromanage.
+
+6️⃣ Face-to-face communication is best
+
+Direct communication is the most effective way to share information.
+
+👉 In modern teams → video calls, stand-ups.
+
+7️⃣ Working software is the main measure of progress
+
+Not documents — real working features matter.
+
+8️⃣ Maintain a sustainable pace
+
+Teams should work at a pace they can maintain long-term.
+
+👉 Avoid burnout.
+
+9️⃣ Continuous attention to technical excellence
+
+Good design and clean code increase agility.
+
+👉 Refactoring is important.
+
+🔟 Simplicity is essential
+
+Do only what is necessary — avoid unnecessary work.
+
+1️⃣1️⃣ Self-organizing teams
+
+Best designs and solutions come from self-managed teams.
+
+1️⃣2️⃣ Regular reflection and improvement
+
+Teams regularly inspect and adapt their behavior.
+
+👉 Example: Sprint Retrospective.
+
+now we are going to talk about devops version control system
+as a practise we are going to develop a basic node.js project and we are going to manage the version control system.
+
+firstly create a folder anywhere like CODE , again create APP after that go to cmd check versions like git,npm,node
+
+after that create project using npm init -y
+after that create a new text file
+after that in folder go the icons show option and enable file name extensions. after that rename that text file to the index.js and open with notepad
+   console.log('Hello Git & Node App');
+   now enough.
+go back to cmd and check using node index.js , project is working.
+
+
 
 
 
