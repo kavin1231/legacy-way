@@ -622,9 +622,14 @@ git commit -m "Initial commit setup nodejs"
 create another file , like config.json and again add that into git using git add .  , after that again git status.
 git log
 git log --oneline
-
-
-
+create .env file also
+npm i express
+git status , so there are have useless files.
+create .env file , and add node_modules and .env files to that.save
+git status . 
+git add .
+git commit -m "create gitignore file"
+git log --oneline
 
 
 
