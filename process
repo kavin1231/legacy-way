@@ -608,16 +608,20 @@ after that in folder go the icons show option and enable file name extensions. a
    now enough.
 go back to cmd and check using node index.js , project is working.
 
+now we need to initailized the project using git init
 
+git status, files are untracked.
 
+git add index.js
+git status.  now you can see one file tracked so we cant add like this one by one. so git has a trick using  
 
+git add .
+git status
+git commit -m "Initial commit setup nodejs"
 
-
-
-
-
-
-
+create another file , like config.json and again add that into git using git add .  , after that again git status.
+git log
+git log --oneline
 
 
 
