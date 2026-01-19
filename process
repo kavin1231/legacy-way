@@ -631,8 +631,34 @@ git add .
 git commit -m "create gitignore file"
 git log --oneline
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+linux commands basics.......
 
 
+ls
+ls -lah  - file list detailed, human readable
+mkdir , rmdir (if there no any permissions you need to apply sudo infront), and also if there inside something you cant directly delete the directory.. then use (sudo rm -r devops) -> directory create , delete
+sudo nano devops-text.txt (file creation) /sudo rm devops-text.txt
+ekaka theana file ekak thawath ehekata copy krgnna one example..
+
+    sudo nano devops.txt > hello world > ctrl + x > y 
+    ls   
+    cat source.txt
+    sudo cp source.txt backup.txt
+    cat backup.txt ( this is using for look inside content of the file)
+
+how to find a file location
+  sudo find / -name backup.txt
+And find in a specific location
+  sudo find /home -name backup.txt
+
+sudo nano backup.txt / we can also use vim backup.txt
+sudo apt install vim
+vim backup.txt
+i , esc , :wq!
+
+pwd - using for check current path
+34;27
 
 
 
