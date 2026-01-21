@@ -658,7 +658,40 @@ vim backup.txt
 i , esc , :wq!
 
 pwd - using for check current path
-34;27
+
+cat backup.txt
+
+now we are going to learn about permision
+
+create user > sudo adduser devuser , add fullname,roomnumber 1,phone numbers,and yes
+
+add user to a group > sudo usermod -aG sudo devuser
+how to check the group > groups devuser
+switch the user > su - devuser 
+go back to linuxcode
+
+sudo apt update (only refresh)
+sudo apt upgrade (Install)
+processors monitoring > ps aux
+                           top
+                           htop
+
+how to terminate a process.
+              kill 
+free -h (details about usage of memmory)
+df -h (disk usage)
+du -sh * (floder size)
+
+now we are going to add services...
+  sudo apt install nginx -y
+  sudo systemctl start nginx
+  sudo systemctl restart nginx
+  sudo systemctl enable nginx
+  sudo systemctl status nginx
+sudo journalctl -u nginx --since "10 min ago"
+
+now we are going to learn some networking basics..
+  1;27
 
 
 
