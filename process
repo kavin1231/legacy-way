@@ -691,7 +691,38 @@ now we are going to add services...
 sudo journalctl -u nginx --since "10 min ago"
 
 now we are going to learn some networking basics..
-  1;27
 
+ ip a
+ ip route (chcek route table)
+ ping google.com ( connect with another server)
+ curl http://localhost (nginx working or not)
+how to check which ports are open , we need to use nettools
 
+sudo apt install net-tools
+netstat -tulnp (we can see all ports what we are using in here)
+   modern replacement for that 
+         ss -tulnp
 
+now we are going to learn about docker
+ sudo apt remove docker docker-engine docker.io containerd runc
+ sudo apt update 
+ sudo apt upgrade -y
+ sudo apt install ca-certificates curl gnupg -y
+ sudo install -m 0755 -d /etc/apt/keyrings
+ curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+ sudo chmod a+r /etc/apt/keyrings/docker.gpg
+
+now we are going to add docker repository
+ cd /etc
+ cat os-release
+ echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ sudo apt update
+apt-cache policy docker-ce  (check if docker correctly install or not)
+now install docker 
+   sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
