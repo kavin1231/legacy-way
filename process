@@ -91,6 +91,10 @@ after that add inbound rule for mongodb and system running port
 
 git -v
 
+
+
+
+
 if there is no any versions we need to install git 
 after that we  can clone our github repositories in here 
      but if that is public we can without anyerrors clone,but if that was a private repository we cant directly clone.so we need to do some steps for that...
@@ -726,3 +730,138 @@ now install docker
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo systemctl status docker
+
+
+
+
+
+now we are going to talk about containerization
+
+ Containerization is the process of packaging applications and their dependencies into lightweight containers to ensure consistency, scalability, and faster deployment across environments.
+
+
+| Feature        | Container                         | Virtual Machine      |
+| -------------- | ---------------------             | ----------------     |
+| Runs ON        | Shares host OS + Container engine | Hypovisor + own OS   |
+| Size           | Very small (MBs)                  | Very large (GBs)     |
+| Startup Time   | Seconds                           | Minutes              |
+| Performance    | Near-native                       | Slower               |
+| Resource Usage | Low                               | High                 |
+| Isolation      | Process-level                     | Full OS-level        |
+| Scalability    | Very high                         | Limited              |
+| Portability    | Excellent                         | Good                 |
+| Cost           | Lower                             | Higher               |
+
+
+
+Docker Architecture
+
+Docker Hub / Docker Registory
+     ^
+     |pull/push
+     | (Images)
+     |
+     v
+Docker Daemon (dockered)
+     ^
+     |
+     |repeatedly source code
+     |build/run/pull/push
+     |
+     |
+     |
+     v
+Docker Client
+
+
+sudo docker pull nginx
+
+
+1️⃣ Docker Client
+
+The interface used by users
+
+Runs Docker commands like:
+
+docker build
+docker run
+docker pull
+docker push
+
+
+Sends requests to the Docker Daemon using REST API
+
+Can talk to:
+
+Local daemon
+
+Remote daemon
+
+📌 It does NOT run containers itself
+
+2️⃣ Docker Daemon (dockerd)
+
+The heart of Docker
+
+Runs in the background on the host machine
+
+Responsible for:
+
+Building images
+
+Running containers
+
+Managing volumes & networks
+
+Listens for requests from Docker Client
+
+📌 Uses containerd and runc internally
+
+3️⃣ Docker Registry
+
+Stores Docker images
+
+Can be:
+
+Public → Docker Hub
+
+Private → AWS ECR, GCR, ACR
+
+Used for sharing and distributing images
+
+Commands:
+
+docker pull nginx
+docker push myimage
+
+How They Work Together (Flow)
+Docker Client
+     |
+     | (REST API)
+     v
+Docker Daemon
+     |
+     |---- Local Images
+     |
+     |---- Docker Registry
+
+
+Example:
+
+docker run nginx
+
+Client → Daemon
+
+Daemon checks local images
+
+If not found → pulls from Registry
+
+Container starts
+
+Interview-Ready One-Liner
+
+Docker follows a client–server architecture consisting of Docker Client, Docker Daemon, and Docker Registry.
+
+
+43.53
+
