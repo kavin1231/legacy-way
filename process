@@ -839,12 +839,18 @@ Docker Client
      |
      | (REST API)
      v
-Docker Daemon
+Docker Daemon (engine)
      |
      |---- Local Images
      |
-     |---- Docker Registry
+Docker Registry
+     |
+     |---- Store images
+     | 
 
+what is image?
+Interview One-Liner
+A Docker image is a lightweight, read-only template that contains an application and its dependencies, used to create containers.
 
 Example:
 
@@ -863,5 +869,7 @@ Interview-Ready One-Liner
 Docker follows a client–server architecture consisting of Docker Client, Docker Daemon, and Docker Registry.
 
 
-43.53
+install docker desktop
+
+
 
