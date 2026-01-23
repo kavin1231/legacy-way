@@ -871,5 +871,22 @@ Docker follows a client–server architecture consisting of Docker Client, Docke
 
 install docker desktop
 
+docker run nginx ( then you can see localy nginx not have, so send a request to the registry and pull the requirment.)
+
+addidtional codes
+...................
+
+docker pull ubuntu:20.5.0
+docker push myapp/app:latest
+docker stop nginx
+docker rm nginx
+docker ps ( docker currently processing list )
+docker run nginx
+new terminal docker ps
+docker ps -a
+docker logs 419d18351322 ( container id )
+
+
+
 
 
