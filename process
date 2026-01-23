@@ -886,7 +886,115 @@ new terminal docker ps
 docker ps -a
 docker logs 419d18351322 ( container id )
 
+................................................
+What is Docker? 🐳
+Simple Definition
+
+Docker is an open-source platform used to build, package, and run applications inside containers.
+
+It helps developers and DevOps teams run applications consistently across all environments.
+
+docker images vs docker container
 
 
+Feature	            Docker Image	              Docker Container
+Type	                Static	                  Dynamic
+State	                Read-only	                Read & write
+Purpose	         Used to create containers	    Runs the application
+Storage          	Stored on disk	              Runs in memory
+Lifecycle	        Built once, reused	          Created, started, stopped
+Can be changed?	    ❌ No                     	✅ Yes (runtime)
+Multiple instances	N/A                        	Yes (from same image)
+example             cake recipe                 actual cake
 
+docker registry -> storage system for store docker images ex- ecr,amazon,gcr,acr,gitlab,dockerhub
+docker hub -> container registor , world biggest registery , default manage regestry , pull push images.
+
+now we are going to create docker image 
+.......................................
+
+create a empty dolder -> npm init -y -> open folder in vs code or intellig -> create index.js -> new terminal -> npm install express
+
+index.js edit >
+const express=require("express");
+const app=express();
+const port=3000;
+app.get("/",(req,res)=>{
+    res.send("Hello from containerized Node + Express App! ");
+});
+app.listen(port,()=>{
+    console.log(`Server is running at http://localhost:${port}`);
+});
+
+check if it is running or not using ( nodemon )
+now create Dockerfile 
+
+    FROM node:18
+
+    LABEL authors="Kavindra chamath"
+
+    WORKDIR /app
+
+    COPY package*.json ./
+
+    RUN npm install
+
+    COPY . .
+
+    EXPOSE 3000
+
+    CMD ["npm", "start"]
+
+
+now we are going to create docker image 
+ docker build -t devops-app:v1 .
+
+docker
+👉 Docker command-line tool
+Used to interact with Docker
+
+build
+👉 Tells Docker to create an image
+It reads instructions from a Dockerfile
+
+-t
+👉 Tag option
+Used to give a name and version to the image
+
+devops-app ->
+👉 Image name
+You choose this (project/app name)
+
+v1 -> Helps manage versions (v1, v2, latest)
+
+devops-app:v1 -> Full image name + version
+
+.   -> Use the current directory
+
+
+...................
+now run the docker
+
+docker run -d -p 3000:3000 devops-app:v1
+
+open package.json add a script 
+   "start": "node index.js"
+
+docker build -t devops-app:v2 .
+And run again 
+docker run -d -p 3000:3000 devops-app:v2
+            |
+            |
+            v
+          running background
+now you can see its working
+
+now check processors
+docker ps
+
+that's it .we are successfully created docker image....
+docker file is the recipe , docker image is the noodles
+
+check the -> docker images 
+6.01
 
