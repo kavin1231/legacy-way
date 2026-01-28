@@ -996,5 +996,33 @@ that's it .we are successfully created docker image....
 docker file is the recipe , docker image is the noodles
 
 check the -> docker images 
-6.01
 
+docker stop dda27e899add
+
+docker ps you can see nothing in process
+docker run -d -p 3000:3000 devops-app:v2
+if you need to remove so firstly u need to stop docker image
+docker stop 91077c80d758
+docker rm 91077c80d758
+docker logs 91077c80d758
+
+image is the blueprint , container is the running app
+image  build only one time , container can run many times
+
+now we are going to talk about docker registry
+firstly log into the system 
+
+how to tag docker image
+docker tag devops-app:v1 kavinfernando/devops-app:v2
+
+now log into docker using this -> docker login 
+after that push to the docker repository
+docker push kavinfernando/devops-app:v2
+
+now you can see in the docker repo web
+
+after that you need to get this link 
+docker pull kavinfernando/devops-app:v2
+ and create a folder again like pull code ,open it in cmd, paste this pull url ..docker pull kavinfernando/devops-app:v2
+then you need to run it 
+docker run -d -p 3000:3000 kavinfernando/devops-app:v2
