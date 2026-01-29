@@ -1026,3 +1026,178 @@ docker pull kavinfernando/devops-app:v2
  and create a folder again like pull code ,open it in cmd, paste this pull url ..docker pull kavinfernando/devops-app:v2
 then you need to run it 
 docker run -d -p 3000:3000 kavinfernando/devops-app:v2
+
+-----------------------------------------------------------------------------------
+
+now we are going to learn about kubernatees
+
+-----------------------------------------------------------------------------------
+
+What is Kubernetes?
+
+Kubernetes (K8s) is an open-source platform used to run, manage, and scale containerized applications automatically.
+
+In easy words:
+
+👉 Docker creates containers
+👉 Kubernetes manages those containers
+
+What Kubernetes does
+
+🚀 Deploys applications
+
+⚖️ Scales apps up/down automatically
+
+🔄 Restarts failed containers (self-healing)
+
+🌐 Load balances traffic
+
+🔁 Updates apps with zero downtime
+
+Example
+
+If your app runs in 100 containers on 10 servers, Kubernetes:
+
+Decides where each container runs
+
+Keeps the app always running
+
+Replaces containers if they crash
+
+One-line interview answer 🎯
+
+👉 Kubernetes is a container orchestration tool that automates deployment, scaling, and management of containerized applications.
+
+go to kubectl install
+curl.exe -LO "https://dl.k8s.io/release/v1.35.0/bin/windows/amd64/kubectl.exe"
+
+architecture 
+
+Hardware
+↓
+Host Operating System
+↓
+Hypervisor (VMware, VirtualBox, Hyper-V)
+↓
+Virtual Machine (VM)
+↓
+Guest Operating System
+↓
+Application
+
+
+
+
+
+
+but 
+
+
+
+Kubernetes uses containers, not full VMs:
+
+Hardware
+↓
+Host Operating System (Linux)
+↓
+Container Runtime (Docker / containerd)
+↓
+Container
+↓
+Application
+
+NO Guest OS inside containers
+👉 Containers share the host OS kernel
+
+3️⃣ Kubernetes Cluster Architecture (High level)
+Hardware / Cloud
+↓
+Operating System
+↓
+Kubernetes Cluster
+   ├── Control Plane (API Server, Scheduler, etcd)
+   └── Worker Nodes (Pods, Containers)
+↓
+Applications
+
+Key Difference (Very Important for Interviews)
+VM	                             Container
+Has Guest OS(ubuntu,windows)	  No Guest OS
+Heavy	                          Lightweight
+Slow startup	                  Fast startup
+Uses Hypervisor	                Uses Container Runtime
+
+
+Benefits of Kubernetes
+
+1️⃣ Automatic Scaling
+Scales applications up or down based on traffic.
+
+2️⃣ Self-Healing
+Restarts failed containers automatically.
+
+3️⃣ High Availability
+Keeps applications running with minimal downtime.
+
+4️⃣ Load Balancing
+Distributes traffic evenly across containers.
+
+5️⃣ Easy Deployment & Updates
+Supports rolling updates with zero downtime.
+
+6️⃣ Efficient Resource Usage
+Uses server resources better than VMs.
+
+7️⃣ Portability
+Runs on any cloud or on-prem environment.
+
+8️⃣ Fault Tolerance  
+Moves workloads if a node fails.
+
+
+
+Kubernetes Cluster
+
+A Kubernetes Cluster is a group of machines that run containerized applications.
+
+It has two main parts 👇
+
+1️⃣ Control Plane (Master)
+
+Manages and controls the cluster
+
+API Server
+Entry point for all requests (kubectl talks to this).
+
+Scheduler
+Decides which worker node a Pod should run on.
+
+etcd
+Stores cluster data and state.
+
+Controller Manager
+Ensures desired state (restarts failed Pods).
+
+2️⃣ Worker Nodes
+
+Runs the applications
+
+Pods
+Smallest deployable unit in Kubernetes.
+
+Containers
+Run inside Pods (Docker/containerd).
+
+Kubelet
+Talks to Control Plane and manages Pods.
+
+Kube-proxy
+Handles networking and load balancing.
+
+One-line summary 🎯
+
+👉 Control Plane decides what to run, Worker Nodes run the applications.
+
+user , kubectl , api server , schedular , control manager, etcd , worker 1,2,3 , pods
+
+
